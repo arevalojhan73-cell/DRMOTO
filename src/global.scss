@@ -1,0 +1,541 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+/* global.scss - Estilos globales para DrMoto */
+
+:root {
+  /* Colores principales */
+  --drmoto-primary: #3880ff;
+  --drmoto-secondary: #0cd1e8;
+  --drmoto-tertiary: #7044ff;
+  --drmoto-success: #10dc60;
+  --drmoto-warning: #ffce00;
+  --drmoto-danger: #f04141;
+  --drmoto-dark: #222428;
+  --drmoto-medium: #989aa2;
+  --drmoto-light: #f4f5f8;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, var(--drmoto-primary) 0%, var(--drmoto-secondary) 100%);
+  --gradient-dark: linear-gradient(135deg, #1e1e2e 0%, #2d3748 100%);
+  
+  /* Sombras */
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 8px 32px rgba(0, 0, 0, 0.2);
+  
+  /* Bordes redondeados */
+  --border-radius-small: 8px;
+  --border-radius-medium: 12px;
+  --border-radius-large: 16px;
+}
+
+/* login.page.scss */
+.login-content {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  .login-container {
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .logo-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    .logo-icon {
+      font-size: 4rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .app-title {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .app-subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
+      margin: 0.5rem 0 0 0;
+    }
+  }
+  
+  .auth-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-heavy);
+    
+    .input-item {
+      --background: rgba(248, 249, 250, 0.8);
+      --border-radius: var(--border-radius-medium);
+      margin-bottom: 1rem;
+      
+      .input-icon {
+        color: var(--drmoto-medium);
+      }
+      
+      ion-input {
+        --padding-start: 12px;
+      }
+    }
+    
+    .login-button {
+      --background: var(--gradient-primary);
+      --border-radius: var(--border-radius-medium);
+      --box-shadow: var(--shadow-medium);
+      margin-top: 1rem;
+      height: 50px;
+      font-weight: 600;
+      
+      &:hover {
+        transform: translateY(-1px);
+        --box-shadow: var(--shadow-heavy);
+      }
+    }
+    
+    .forgot-password {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  
+  .register-section {
+    margin-top: 2rem;
+    text-align: center;
+    
+    .register-text {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+    }
+    
+    ion-button {
+      --background: rgba(255, 255, 255, 0.1);
+      --color: white;
+      --border-color: rgba(255, 255, 255, 0.3);
+      --border-radius: var(--border-radius-medium);
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+
+/* gallery.page.scss */
+.stats-card {
+  margin: 1rem;
+  background: var(--gradient-primary);
+  color: white;
+  
+  .stat-item {
+    text-align: center;
+    
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--drmoto-medium);
+  
+  .empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    margin-bottom: 2rem;
+    opacity: 0.8;
+  }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--drmoto-medium);
+  
+  ion-spinner {
+    margin-bottom: 1rem;
+  }
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  padding: 1rem;
+  
+  .photo-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .photo-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      color: white;
+      padding: 1rem 0.5rem 0.5rem;
+      transform: translateY(100%);
+      transition: transform 0.2s ease;
+      
+      .photo-info {
+        h3 {
+          font-size: 0.9rem;
+          margin: 0 0 0.25rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
+        p {
+          font-size: 0.75rem;
+          opacity: 0.8;
+          margin: 0;
+        }
+      }
+      
+      .photo-actions {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        
+        ion-button {
+          --color: white;
+          height: 32px;
+          width: 32px;
+        }
+      }
+    }
+    
+    &:hover .photo-overlay {
+      transform: translateY(0);
+    }
+  }
+}
+
+.photo-detail {
+  .photo-container {
+    text-align: center;
+    background: var(--drmoto-dark);
+    padding: 1rem;
+    
+    img {
+      max-width: 100%;
+      max-height: 50vh;
+      object-fit: contain;
+      border-radius: var(--border-radius-medium);
+    }
+  }
+  
+  .photo-metadata {
+    margin-top: 1rem;
+    
+    ion-item {
+      --background: transparent;
+      --border-style: none;
+      --padding-start: 0;
+      
+      ion-icon {
+        color: var(--drmoto-primary);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
+  .detail-actions {
+    margin-top: 2rem;
+    
+    ion-button {
+      margin-bottom: 0.5rem;
+      --border-radius: var(--border-radius-medium);
+    }
+  }
+}
+
+/* profile.page.scss */
+.profile-header {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  
+  .avatar-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      object-fit: cover;
+    }
+    
+    .avatar-edit {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--drmoto-secondary);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      
+      ion-icon {
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .user-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .user-email {
+    opacity: 0.8;
+    margin: 0.5rem 0 0;
+  }
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  
+  .stat-card {
+    text-align: center;
+    background: var(--ion-color-light);
+    padding: 1rem;
+    border-radius: var(--border-radius-medium);
+    
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--drmoto-primary);
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--drmoto-medium);
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+.profile-actions {
+  padding: 1rem;
+  
+  ion-button {
+    --border-radius: var(--border-radius-medium);
+    margin-bottom: 0.5rem;
+    
+    &.logout-button {
+      --color: var(--drmoto-danger);
+      --border-color: var(--drmoto-danger);
+    }
+  }
+}
+
+/* settings.page.scss */
+.settings-section {
+  margin-bottom: 2rem;
+  
+  .section-header {
+    padding: 1rem 1rem 0.5rem;
+    
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--drmoto-primary);
+      margin: 0;
+    }
+  }
+  
+  .settings-card {
+    margin: 0 1rem;
+    
+    ion-item {
+      --padding-start: 1rem;
+      --padding-end: 1rem;
+      
+      ion-icon {
+        color: var(--drmoto-primary);
+        margin-right: 1rem;
+      }
+      
+      ion-toggle, ion-select {
+        --background: var(--drmoto-light);
+      }
+    }
+  }
+}
+
+.danger-zone {
+  .section-header h2 {
+    color: var(--drmoto-danger);
+  }
+  
+  ion-button {
+    --color: var(--drmoto-danger);
+    --border-color: var(--drmoto-danger);
+  }
+}
+
+/* tabs.page.scss */
+.tab-bar {
+  --background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--ion-color-light-shade);
+  
+  ion-tab-button {
+    --color: var(--drmoto-medium);
+    --color-selected: var(--drmoto-primary);
+    
+    ion-icon {
+      font-size: 1.5rem;
+    }
+    
+    ion-label {
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+/* Animaciones personalizadas */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp 0.3s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    padding: 1.5rem;
+  }
+  
+  .login-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .profile-stats {
+    max-width: 600px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 2rem;
+  }
+}
