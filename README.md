@@ -446,8 +446,8 @@ Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](L
 ## 📞 Contacto y Soporte
 
 - **Email**: soporte@drmoto.app
-- **GitHub**: [https://github.com/tu-usuario/drmoto](https://github.com/tu-usuario/drmoto)
-- **Documentación**: [https://docs.drmoto.app](https://docs.drmoto.app)
+- **GitHub**: [https://github.com/tu-usuario/drmoto]([https://github.com/tu-usuario/drmoto](https://github.com/arevalojhan73-cell/DRMOTO))
+- **Documentación**: [https://docs.drmoto.app]([https://docs.drmoto.app](https://drive.google.com/drive/folders/12IdRHj7P6wS-Qh3gvEGWnyipR2zfOjm5))
 
 ---
 
